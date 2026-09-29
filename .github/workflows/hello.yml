@@ -16,7 +16,8 @@ jobs:
           BRANCH: ${{ github.ref_name }}
         run: | 
           echo "Branch: $BRANCH"
-  second-job: 
+  second-job:
+    needs:  information
     runs-on: ubuntu-latest 
     steps: 
       - name: Second Job 
